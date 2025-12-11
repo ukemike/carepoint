@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 42 15% 98%;
+    --foreground: 210 100% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 100% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 100% 15%;
+
+    --primary: 210 100% 15%;
+    --primary-foreground: 42 15% 98%;
+
+    --secondary: 174 84% 29%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 174 84% 29%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 351 83% 71%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 174 84% 29%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[#FAFAF9] text-foreground;
+    font-family: 'Manrope', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Sora', sans-serif;
+  }
+  .font-body {
+    font-family: 'Manrope', sans-serif;
+  }
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  @keyframes pulse-scale {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  .animate-pulse-scale {
+    animation: pulse-scale 3s ease-in-out infinite;
+  }
+  
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-up {
+    animation: fade-up 0.6s ease-out forwards;
+  }
+}
